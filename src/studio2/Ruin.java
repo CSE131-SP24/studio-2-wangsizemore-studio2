@@ -23,20 +23,21 @@ public class Ruin {
 		int totalSimulations = in.nextInt();
 		
   for(int i = 1; i <= totalSimulations; i++)
-		while((startAmount > 0) && (startAmount < winLimit))
+  {
+		double currentAmount = startAmount;
+		System.out.print("Simulation " + i + ":");
+		
+	  while((currentAmount > 0) && (currentAmount < winLimit))
 			{
 				if (winOrLose <= winChance)
 					{
-						System.out.println("You win!");
-						startAmount = startAmount + 1;
-						System.out.println(startAmount);
+						currentAmount++;
 					}
 		
 				else
 					{
-						System.out.println("You lose!");
-						startAmount = startAmount - 1;
-						System.out.println(startAmount);
+						currentAmount--;
+		}
 		}
 		}
 		
